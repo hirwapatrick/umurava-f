@@ -50,8 +50,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
-      <div className="glass-card max-w-md w-full p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 sm:p-6">
+      <div className="glass-card max-w-md w-full p-6 sm:p-8 relative overflow-hidden">
         {/* Aesthetic background gradients */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400 rounded-full blur-[80px] opacity-20 -mr-10 -mt-10 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-400 rounded-full blur-[80px] opacity-20 -ml-10 -mb-10 pointer-events-none"></div>

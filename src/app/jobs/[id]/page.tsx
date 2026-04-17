@@ -227,8 +227,8 @@ export default function JobDetailPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 pb-20">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-10 w-full mb-10">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-30 w-full mb-6 lg:mb-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 min-h-16 py-4 lg:py-0 lg:h-16 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <Link href="/" className="p-2 -ml-2 text-slate-400 hover:text-slate-800 hover:bg-slate-100 rounded-full transition-colors">
               <ArrowLeft size={20} />
@@ -247,10 +247,10 @@ export default function JobDetailPage() {
                   </button>
                </div>
             </div>
-            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700 capitalize">{job.status}</span>
+            <span className="px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-medium bg-blue-100 text-blue-700 capitalize whitespace-nowrap">{job.status}</span>
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
              <button 
                 onClick={copyApplyLink}
                 className="flex items-center gap-2 text-slate-600 hover:text-slate-900 px-4 py-2 text-sm font-medium transition-colors"
@@ -274,10 +274,10 @@ export default function JobDetailPage() {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
          {/* Left Col: Job Details & Applicants */}
-         <div className="lg:col-span-2 space-y-8">
-            <div className="glass p-8 rounded-2xl">
+         <div className="lg:col-span-2 space-y-6 lg:space-y-8">
+            <div className="glass p-5 sm:p-8 rounded-2xl">
                <h2 className="text-xl font-bold text-slate-800 mb-6 pb-4 border-b border-slate-100 flex items-center gap-2">
                   <Clock size={20} className="text-blue-500" />
                   Details
@@ -310,7 +310,7 @@ export default function JobDetailPage() {
             </div>
 
             {/* Applicant Pool List */}
-            <div className="glass p-8 rounded-2xl">
+            <div className="glass p-5 sm:p-8 rounded-2xl">
                <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-100">
                   <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
                      <Users size={20} className="text-blue-500" />
@@ -327,7 +327,7 @@ export default function JobDetailPage() {
                      </div>
                   ) : (
                      applicants.map((app) => (
-                        <div key={app._id} className="flex items-center justify-between p-4 bg-white/50 border border-white hover:border-blue-100 rounded-xl transition-all group">
+                        <div key={app._id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-white/50 border border-white hover:border-blue-100 rounded-xl transition-all group gap-4 text-left">
                            <div className="flex items-center gap-4">
                               <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-bold">
                                  {app.firstName[0]}{app.lastName[0]}

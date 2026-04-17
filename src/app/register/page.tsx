@@ -49,8 +49,8 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6 py-12">
-      <div className="glass-card max-w-md w-full p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 sm:p-6 py-12">
+      <div className="glass-card max-w-md w-full p-6 sm:p-8 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-32 h-32 bg-blue-400 rounded-full blur-[80px] opacity-20 -ml-10 -mt-10 pointer-events-none"></div>
         <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-400 rounded-full blur-[80px] opacity-20 -mr-10 -mb-10 pointer-events-none"></div>
 
@@ -69,7 +69,7 @@ export default function RegisterPage() {
         )}
 
         <form onSubmit={handleRegister} className="space-y-4 relative z-10">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1">
               <label className="text-sm font-medium text-slate-700 block">First Name</label>
               <input required type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all text-sm bg-white" placeholder="Jane" />
